@@ -1,13 +1,22 @@
 
-import{Routes, Route} from 'react-router-dom'
+import{Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-
-      <h1 className="display-1"> Bootstrap! </h1>
+    <>
+    <Navbar>
       
-    </div>
+    </Navbar>
+    <Routes>
+
+      <Route path="/" element={ <Home/>}></Route>
+
+
+    </Routes>
+    
+    </>
   );
 }
 
