@@ -2,10 +2,10 @@ import React,{useContext,useRef,useState}from 'react';
 import { UserContext } from '../context/userContext';
 import { useNavigate } from 'react-router-dom';
 
-const SignUpModal = () => {
+const SignInModal = () => {
 
 
-    const {modalState,toggleModals,signUp}=useContext(UserContext);
+    const {modalState,toggleModals,signIn}=useContext(UserContext);
     const [validation,setValidation]=useState("");
 
     const navigate = useNavigate();
@@ -23,40 +23,28 @@ const SignUpModal = () => {
 
     const handleForm = async(e)=>{
         e.preventDefault();
-        console.log(inputs.current[0].value)
-        if(inputs.current[1].value.length<6||inputs.current[2].value.length<6){
-            console.log(inputs.current[1].value)
-            setValidation("6 characteres minimum");
-            return;
-        }else if(inputs.current[1].value.length !== inputs.current[1].value.length){
-            setValidation("Password do not match");
-            return;
-        }
-
+        
+        
        try {
            
-        const cred = await signUp(inputs.current[0].value,inputs.current[1].value)
+        const cred = await signIn(inputs.current[0].value,inputs.current[1].value)
         formRef.current.reset();
         setValidation("");
         navigate('/private/private-home');
         toggleModals("Close");
     } catch (error) {
-           if(error.code === "auth/invalid-email"){
-               setValidation("Email format invalid")
-           }
-           if(error.code === "auth/email-already-in-use"){
-            setValidation("Email already used")
+           setValidation("Email or password incorrect!")
         }
        }
 
 
 
-    }
+    
 
     console.log(inputs);
 
   
-  return (<>{ modalState.signUpModal  &&
+  return (<>{ modalState.signInModal  &&
     
     <div className="position-fixed top-0 vw-100 vh-100">
 
@@ -67,7 +55,7 @@ const SignUpModal = () => {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header"> 
-                            <h5 className="modal-title"> Sign Up</h5>
+                            <h5 className="modal-title"> Login</h5>
                             <button className="btn-close" onClick={()=>{toggleModals("Close");setValidation("")}}></button>
                         </div>
 
@@ -84,10 +72,7 @@ const SignUpModal = () => {
                                     <input ref={addInputs} type="password" name="pwd" className='form-control' id="SignUpPassword" required />
                                 </div>
 
-                                <div className="mb-3">
-                                    <label className="form-label" htmlFor="RepeatPwd">Repeat Password</label>
-                                    <input ref={addInputs} type="password" name="pwd" className='form-control' id="SignUpPassword" required />
-                                </div>
+                               
 
                                 <h4 className="text-danger ">{validation}</h4>
 
@@ -108,4 +93,4 @@ const SignUpModal = () => {
   )
 }
 
-export default SignUpModal
+export default SignInModal

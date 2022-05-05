@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import './home.css';
+
 
  const Home = () => {
   return (
-    <div className="container p-5">
+    <div className="cover container p-5 flex">
 
-        <h1 className="display-2 text-light">
-            Bonjour , Login et SignUP
+        <h1 className=" cover-text display-5 text-light">
+            Bievenue sur la plateforme PI concu pour les jeunes
+            
         </h1>
 
 
