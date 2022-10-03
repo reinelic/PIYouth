@@ -23,15 +23,17 @@ const Navbar = () => {
    <nav className="navbar navbar-light bg-light px-4">
 
        <Link to="" className="navbar-brand">Youth</Link>
+       <div className ="d-flex justify-content-end">
+       <div className ="mx-3"> <Link to = "/cdsList"> <button className="text-info btn btn-outline-primary "> Centre de Sante </button> </Link></div>
        <div>
            {
                !currentUser?
                <>
-                   <button className="btn btn-primary" onClick={()=>{ toggleModals("SignIn");}}>
+                   <button className="btn btn-outline-danger text-primary" onClick={()=>{ toggleModals("SignIn");}}>
                    Sign In
                </button>
     
-               <button className="btn btn-primary ms-2" onClick={()=>{toggleModals("SignUp")}} >
+               <button className="btn btn-outline-danger text-primary ms-2" onClick={()=>{toggleModals("SignUp")}} >
                    Sign Up
                </button>
                
@@ -42,11 +44,24 @@ const Navbar = () => {
     
            :   <>
               
-               <button 
+            
+            <button 
+                
+                className="btn btn-primary ms-2 ">
+               <Link to ="private/private-home "> <span className="text-white">Acceuil</span> </Link>  
+            </button>
+            <button 
+                
+                className="btn btn-primary ms-2 text-light">
+               <Link to ="/rendez"> <span className="text-white">Prendre un rendez-vous</span></Link>  
+            </button>
+
+            <button 
                 onClick ={logOut}
                 className="btn btn-danger ms-2">
                 Logout
             </button>
+
            
               </>
          
@@ -57,6 +72,8 @@ const Navbar = () => {
 
 
        </div>
+       </div>
+    
 
    </nav>
   )

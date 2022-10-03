@@ -1,39 +1,57 @@
-import React,{useContext,useRef,useState}from 'react';
+import React,{useContext,useRef,useState,useEffect}from 'react';
 import { UserContext } from '../context/userContext';
 import { useNavigate } from 'react-router-dom';
 
 const SignInModal = () => {
 
-
+    const[ email , setEmail] = useState("")
+    const[ password , setPassword] = useState("")
+     
     const {modalState,toggleModals,signIn}=useContext(UserContext);
     const [validation,setValidation]=useState("");
 
     const navigate = useNavigate();
 
-    const inputs = useRef([]);
+    // const inputs = useRef([]);
 
-    const addInputs =(el)=>{
+    // const addInputs =(el)=>{
 
-        if(el && !inputs.current.includes(el)){
-            inputs.current.push(el)
-        }
-    }
+    //     console.log('Inputs length')
+    //     console.log(inputs.current.length);
+    //     console.log(inputs.current)
+    //     console.log(el)
 
-    const formRef =useRef();
+    //     if(el && !inputs.current.includes(el)){
+    //         inputs.current.push(el)
+    //     }
+    // }
+
+    // const formRef =useRef();
 
     const handleForm = async(e)=>{
         e.preventDefault();
-        
-        
-       try {
+        // console.log(formRef)
            
-        const cred = await signIn(inputs.current[0].value,inputs.current[1].value)
-        formRef.current.reset();
+       try {
+        console.log(email, password);
+        const cred = await signIn(email, password)
+        console.log(cred)
+        // formRef.current.reset();
         setValidation("");
+        setEmail('');
+        setPassword( '')
+    
         navigate('/private/private-home');
+
+
+
         toggleModals("Close");
+
+         
     } catch (error) {
+           console.log(error.code);
            setValidation("Email or password incorrect!")
+           
         }
        }
 
@@ -41,16 +59,16 @@ const SignInModal = () => {
 
     
 
-    console.log(inputs);
+    // console.log(inputs);
 
   
   return (<>{ modalState.signInModal  &&
     
-    <div className="position-fixed top-0 vw-100 vh-100">
+    <div className="position-fixed top-0 vw-100 vh-100 signinmodal">
 
-        <div className="w-100 h-100 bg-dark opacity-75C0ncern">
+        <div className="w-100 h-100 bg-dark p-20 ">
 
-            <div className="position-absolute top-50 start-50 translate-middle">
+            <div className="position-absolute top-50 start-50 translate-middle ">
 
                 <div className="modal-dialog">
                     <div className="modal-content">
@@ -60,16 +78,16 @@ const SignInModal = () => {
                         </div>
 
                         <div className="modal-body">
-                            <form ref={formRef} onSubmit={handleForm} className="sign-up-form">
+                            <form  onSubmit={handleForm} className="sign-up-form">
                                 <div className="mb-3">
-                                    <label className="form-label" htmlFor="SignUpEmail">Email Address</label>
-                                    <input ref={addInputs} type="email" name="email" className='form-control' id="SignUpEmail" required/>
+                                    <label className="form-label" htmlFor="SignInEmail">Email Address</label>
+                                    <input value = {email} onChange ={ (e) => setEmail(e.target.value)}  type="email" name="email" className='form-control' id="SignUpEmail" required/>
                                 </div>
 
 
                                 <div className="mb-3">
-                                    <label className="form-label" htmlFor="SignUpPwd">Password</label>
-                                    <input ref={addInputs} type="password" name="pwd" className='form-control' id="SignUpPassword" required />
+                                    <label className="form-label" htmlFor="SignInPwd">Password</label>
+                                    <input  value = {password} onChange = { (e) =>setPassword(e.target.value)} type="password" name="pwd" className='form-control' id="SignUpPassword" required />
                                 </div>
 
                                
