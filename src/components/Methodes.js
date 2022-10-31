@@ -35,9 +35,9 @@ const Methodes = () => {
 
   const firstMethodes = firstRow.map(method =><>
   <Link to={`/${method.id}`}>
-  <div  key={method.id} className="moyen text-center">
-          <img src={method.methodeUrl} className='icone' alt="" />
-          <div className="">{method.methodeName}</div>
+  <div  key={method.id} className="moyen text-center ">
+          <img src={method.methodeUrl} className='icone methodIcon' alt="" />
+          <div >{method.methodeName}</div>
   </div>        
   </Link>
   
@@ -48,7 +48,7 @@ const Methodes = () => {
 const secondMethodes = secondRow.map(method =><>
  <Link to={`/${method.id}`}>  <div  key={method.id} className="moyen text-center">
 
-<img src={method.methodeUrl} className='icone' alt="" />
+<img src={method.methodeUrl} className='icone methodIcon' alt="" />
 <div className="">{method.methodeName}</div>
 
 </div>

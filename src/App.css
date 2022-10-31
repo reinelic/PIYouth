@@ -47,3 +47,9 @@ footer {
   background-size:cover;
   z-index:2;
 }
+
+.methodIcon:hover{
+
+  background-color:rgb(204, 243, 239);
+
+}

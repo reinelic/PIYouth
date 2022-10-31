@@ -26,7 +26,7 @@ export const Activites = () => {
               {/* <div style={{'backgroundImage': `url(${slideImage.url})`}}>
                 <span>{slideImage.caption}</span>
               </div> */}
-              <div className="activities container-fluid bg-danger text-dark overflow-hidden">
+              <div className="activities container-fluid bg-secondary text-dark overflow-hidden">
               
                     <img src="/lines.png" alt=""  className="d-inline"/> <h2 className="text-danger text-center d-inline">Activities</h2>
                     <div className="row mb-2">

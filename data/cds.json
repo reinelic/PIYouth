@@ -57,7 +57,7 @@
             "id" : 1,
             "methodeName":"Preservatif",
             "methodeUrl":"preservatif.png",
-            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+            "video":"https://www.youtube.com/embed/t4zzwOGTsMk?autoplay=1&mute=1"
         },
         {
             "id" : 2,
@@ -76,7 +76,7 @@
             "id" : 4,
             "methodeName":"Anneau",
             "methodeUrl":"Anneau.png",
-            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+            "video":"https://www.youtube.com/embed/t4zzwOGTsMk?autoplay=1&mute=1"
     
         },
         {

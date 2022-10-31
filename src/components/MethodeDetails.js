@@ -70,10 +70,13 @@ export const MethodeDetails = () => {
         <h2> Mode d'emploi     </h2>
         <div className="col">
 
-          <Video>
-            <source  src ={method.video} />
-          </Video>
-
+        <iframe
+                            width="420"
+                            height="315"
+                            src={method.video}
+                            title="YouTube video player"
+                            frameborder="0"
+                          ></iframe>
         </div>
 
 
