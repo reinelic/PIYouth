@@ -66,15 +66,22 @@ const SignInModal = () => {
     
     <div className="position-fixed top-0 vw-100 vh-100 signinmodal">
 
-        <div className="w-100 h-100 bg-dark p-20 ">
+        <div className="w-100 h-100 bg-danger p-20 d-flex justify-content-around align-items-center border-info">
 
-            <div className="position-absolute top-50 start-50 translate-middle ">
+            <div className="form-info w-50 h-100 align-middle fs-2 p-4">
+                
+               Bienvenue sur  la plateforme dediee aux Jeunesse
 
+
+            </div>
+
+            {/* <div className="position-absolute top-50 start-50 translate-middle "> */}
+               <div className="form w-50 h-100 p-5 text-light">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header"> 
                             <h5 className="modal-title"> Login</h5>
-                            <button className="btn-close" onClick={()=>{toggleModals("Close");setValidation("")}}></button>
+                            <button className="btn-close btn-light" onClick={()=>{toggleModals("Close");setValidation("")}}></button>
                         </div>
 
                         <div className="modal-body">

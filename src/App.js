@@ -1,6 +1,7 @@
 
 import{Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
+import { MethodeDetails } from './components/MethodeDetails';
 import Navbar from './components/Navbar';
 import Private from './pages/Private/Private';
 import PrivateHome from './pages/Private/PrivateHome/PrivateHome';
@@ -9,11 +10,14 @@ import SignInModal from './components/SignInModal'
 import CdsList from './components/CdsList';
 import CdsDetails from './components/CdsDetails';
 import { Rendezvs} from './components/Rendezvs';
+import { BrowserRouter } from 'react-router-dom';
+import { UserContextProvider } from './context/userContext';
 import './App.css' ; 
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
+    <UserContextProvider>
     <SignUpModal/>
     <SignInModal />
     <Navbar/>
@@ -29,8 +33,11 @@ function App() {
 
       <Route path="/cdsList" element = {< CdsList/>}></Route>
 
+      <Route path= "/:id" element = {<MethodeDetails/>}></Route>
+
       <Route path="/private" element={<Private/>}>  
          <Route path="/private/private-home" element={<PrivateHome/>}/>
+         <Route path="cdsList" element = {< CdsList/>}></Route>
       </Route>
 
 
@@ -39,11 +46,13 @@ function App() {
 
     </Routes>
 
-    <footer className="position-relative text-center bottom-0  p-2 text-info bg-danger mt-2"> Pathfinder Burundi
+    {/* <footer className="position-relative text-center bottom-0  p-2 text-info bg-danger mt-2"> Pathfinder Burundi
     
-     </footer>
-    
-   </div>
+    </footer> */}
+   
+    </UserContextProvider>
+   </BrowserRouter>
+
   );
 }
 

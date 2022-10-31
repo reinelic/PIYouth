@@ -1,5 +1,6 @@
 import React from 'react' ;
 import { useState,useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -20,7 +21,7 @@ useEffect(()=>{
 
  const getCDS = async()=>{
 
-    const data =  await axios.get('http://localhost:3000/services');
+    const data =  await axios.get('http://localhost:3004/cds');
  ;
     console.log(" I am here inside getCDS");
     console.log(data.data);

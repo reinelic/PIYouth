@@ -1,69 +1,76 @@
 import React,{useContext} from 'react';
 import { UserContext } from '../context/userContext';
 import {Link, useNavigate} from  "react-router-dom";
-import { signOut } from 'firebase/auth';
-import { auth } from '../firebase-config';
+import { signOut ,getAuth} from 'firebase/auth';
+
 
 const Navbar = () => {
 
-    const navigate  = useNavigate()
+    const navigate  = useNavigate();
+    const auth = getAuth();
 
     const {toggleModals,currentUser}=useContext(UserContext);
 
     console.log(currentUser);
 
     const logOut = async() =>{
+        try {
+            
+            console.log('I am logging out!');
+            const res =await signOut(auth);
 
-        await signOut(auth);
-        navigate('/')
+            console.log(res);
+            navigate('/')
 
+        } catch (error) {
+
+            console.log(error)
+            
+        }
+        
     }
 
   return (
-   <nav className="navbar navbar-light bg-light px-4">
+   <nav className="navbar navbar-light bg-light px-4 ">
+      
 
-       <Link to="" className="navbar-brand">Youth</Link>
-       <div className ="d-flex justify-content-end">
-       <div className ="mx-3"> <Link to = "/cdsList"> <button className="text-info btn btn-outline-primary "> Centre de Sante </button> </Link></div>
+       <Link to="" className="navbar-brand mb-0 h1 text-primary ">Pathfinder Burundi</Link>
+    
+       <div className =" ">
+       {/* <div className ="mx-3"> <Link to = "/cdsList"> <button className="text-info btn btn-outline-primary "> Centre de Sante </button> </Link></div> */}
        <div>
            {
                !currentUser?
-               <>
-                   <button className="btn btn-outline-danger text-primary" onClick={()=>{ toggleModals("SignIn");}}>
+               <div className="navbar-nav d-flex flex-row">
+                   <div className="nav-item px-2 text-danger" onClick={()=>{ toggleModals("SignIn");}}>
                    Sign In
-               </button>
+               </div>
     
-               <button className="btn btn-outline-danger text-primary ms-2" onClick={()=>{toggleModals("SignUp")}} >
+               <div className="nav-item " onClick={()=>{toggleModals("SignUp")}} >
                    Sign Up
-               </button>
+               </div>
                
-               </>
+               </div>
            
 
            
     
-           :   <>
+           :   <div className="navbar-nav d-flex flex-row">
               
             
-            <button 
-                
-                className="btn btn-primary ms-2 ">
-               <Link to ="private/private-home "> <span className="text-white">Acceuil</span> </Link>  
-            </button>
-            <button 
-                
-                className="btn btn-primary ms-2 text-light">
-               <Link to ="/rendez"> <span className="text-white">Prendre un rendez-vous</span></Link>  
-            </button>
 
-            <button 
-                onClick ={logOut}
-                className="btn btn-danger ms-2">
-                Logout
-            </button>
+                    <div className="nav-item">
+                    <Link to ="private/CdsList"> <span className="text-danger mx-2">CDS-Amis de jeunes</span> </Link>  
+                    </div>
+          
+                    <div
+                        onClick ={ ()=>logOut()}
+                        className="nav-item">
+                        Logout
+                    </div>
 
            
-              </>
+              </div>
          
  
 

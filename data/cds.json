@@ -6,7 +6,7 @@
             "Location":"Bujumbura",
             "ouverture" : "8:00 - 17: 00",
             "contact": "3884992020",
-            "Services": " ",
+            "Services": " "
         },
         {   
             "id":2,
@@ -31,7 +31,7 @@
              "Location":"Bujumbura",
              "ouverture" : "8:00 - 17: 00",
              "contact": "3884992020",
-             "Services": " ",
+             "Services": " "
          },
          {   
             "id":5,
@@ -51,6 +51,48 @@
          }
        
   
-    ]
+    ],
+    "methodes":[
+        {
+            "id" : 1,
+            "methodeName":"Preservatif",
+            "methodeUrl":"preservatif.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+        },
+        {
+            "id" : 2,
+            "methodeName":"Diaphragme",
+            "methodeUrl":"diaphragme.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+        },
+        {
+            "id" : 3,
+            "methodeName":"Injections",
+            "methodeUrl":"Injections.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+    
+        },
+        {
+            "id" : 4,
+            "methodeName":"Anneau",
+            "methodeUrl":"Anneau.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+    
+        },
+        {
+            "id" : 5,
+            "methodeName":"Idu",
+            "methodeUrl":"Idu.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+    
+        },
+        {
+            "id" : 6,
+            "methodeName":"Sayana",
+            "methodeUrl":"Sayana.png",
+            "video":"https://www.youtube.com/watch?v=t4zzwOGTsMk"
+    
+        }
+      ]
   
   }

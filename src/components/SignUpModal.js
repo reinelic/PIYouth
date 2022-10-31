@@ -60,11 +60,19 @@ const SignUpModal = () => {
   
   return (<>{ modalState.signUpModal  &&
     
-    <div className="position-fixed top-0 vw-100 vh-100">
+    <div className="position-fixed top-0 vw-100 vh-100 signinmodal">
 
-        <div className="w-100 h-100 bg-dark  ">
+        <div className="w-100 h-100 bg-dark  bg-danger p-20 d-flex justify-content-around align-items-center border-info ">
+        
+        <div className="form-info w-50 h-100 align-middle fs-2 p-4">
+                
+                Inscrivez-vous pour acceder <br></br>
+                A toutes les informations liees a la contraception
 
-            <div className="position-absolute top-50 start-50 translate-middle mt-2">
+        </div>
+
+            
+            <div className="form w-50 h-100 p-5 text-light">
 
                 <div className="modal-dialog">
                     <div className="modal-content">

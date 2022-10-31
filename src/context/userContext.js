@@ -46,7 +46,7 @@ export function UserContextProvider(props){
                 signInModal:true
             })
 
-            console.log(modalState);
+          
         }
 
         if(modal==="SignUp"){
@@ -55,7 +55,7 @@ export function UserContextProvider(props){
                 signInModal:false
             })
 
-            console.log(modalState);
+            
         }
 
         if(modal==="Close"){

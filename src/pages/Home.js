@@ -3,6 +3,9 @@ import { useState,useEffect } from 'react';
 import './home.css';
 import Cds from '../components/Cds';
 import axios from 'axios';
+import Methodes from '../components/Methodes';
+import { Activites } from '../components/Activites';
+
 
 
 
@@ -12,14 +15,14 @@ import axios from 'axios';
 
   useEffect(()=>{
         
-    getCDS();
+    // getCDS();
 
  },[])
 
  const getCDS = async()=>{
 
 
-    const data =  await axios.get('http://localhost:3000/cds');
+    const data =  await axios.get('http://localhost:3004/cds');
 
     console.log(data);
 
@@ -34,24 +37,81 @@ import axios from 'axios';
 
   return (
     <>
-    <div className="header">
-       <div className="cover container flex mb-4">
+    <div className="container-fluid">
 
-        <h1 className="cover-text display-5 text-light">
-            Bienvenue sur la plateforme PI concu pour les jeunes
+    <div className=" row home flex ">
+       
+       <div className="col-9 ">
+             <img  className ="girl" src="/girl.jpg" alt="girl" />
             
-        </h1>
-      
-      </div>
      
-  </div>
+             <h1 className="home_info">
+              
+                 Jeunesse Resiliente <br/>
+                 Un monde Resilient
+             </h1>
+                  
+       </div>
+       
+       <div className=" col-3 bg-danger">
+       <img className ="position-absolute top-30 start-60 man" src="/man.jpg" alt="young man" />
+       </div>
 
-  <div className="container mt-6">
 
-  <h4 className=" text-center text-info mb-2">
-         Methodes de contraception 
 
-      </h4>
+     
+           
+           
+          
+       </div>
+
+    
+    
+
+  < div className="container-fluid methodes">
+
+ 
+    {/* <div className=" bg-danger position-relative top-0 w-25">
+
+<h4> Les Methodes de contraception</h4> 
+
+</div>     */}
+
+
+   <div className="bg-light d-flex justify-content-around pt-6 pb-6 ">
+
+    <div className= "w-50 contra p-2">
+
+      <img src="/contra_component.png" alt=""  className="component mb-2"/> 
+
+        <div className="text-dark mt-4 ">
+         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam 
+         quas nobis itaque mollitia aut corporis praesentium libero doloribus 
+         tempore, facere ut alias, cum commodi voluptas tempora rerum, perspiciatis 
+         expedita. Blanditiis impedit consectetur cum non unde fugiat magnam repudiandae,
+          
+
+        </div>
+     </div>   
+ 
+ 
+ {/* Methodes  */}
+
+     <Methodes/>
+
+
+      
+
+
+    
+    </div>   
+
+
+    <Activites/>
+    
+
+     
+
      
 
   
@@ -100,7 +160,7 @@ import axios from 'axios';
 
     
 
-
+  </div>
  
 
   </>
