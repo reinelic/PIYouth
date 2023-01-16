@@ -1,62 +1,55 @@
-import React, { useState,useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export const MethodeDetails = () => {
+  const params = useParams()
 
-    const params =useParams();
+  const [method, setMethod] = useState({})
 
-    const[method,setMethod] = useState({})
+  const getMethod = async () => {
+    let nMethod = await axios.get(`http://localhost:3004/methodes/${params.id}`)
+    console.log(nMethod.data)
+    setMethod(nMethod.data)
+  }
 
-    const getMethod = async( )=>{
-        let nMethod = await axios.get(`http://localhost:3004/methodes/${params.id}`);
-        console.log(nMethod.data);
-        setMethod(nMethod.data);
-
-    }
-
-    useEffect(()=>{
-        
-       getMethod();
-       
-
-    },[])
-
+  useEffect(() => {
+    getMethod()
+  }, [])
 
   return (
     <>
-     <div className ="container text-light  mt-2">
-      <div>  <a href="/" className="text-light">Retour</a></div>
+      <div className='container text-light  mt-2'>
+        <div>
+          {' '}
+          <Link to='/' className='text-light'>
+            Retour
+          </Link>
+        </div>
 
-     <div className="row mb-3">
-     <h4> La methode de contraception - {method.methodeName}   </h4>
+        <div className='row mb-3'>
+          <h4> La methode de contraception - {method.methodeName} </h4>
 
+          <div className='col-md-4  text-light mt-2'>
+            <img className='img-fluid img' src={method.methodeUrl} />
+          </div>
 
-      <div className="col-md-4  text-light mt-2">
-       
-        
-        <img  className="img-fluid img" alt="" />
-       
+          <div className='col-md-8  text-light mt-2 '>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nisi
+            vel itaque eligendi tempore, nostrum cum temporibus laboriosam ab
+            laudantium exercitationem omnis sequi officia fuga nesciunt optio
+            eos quibusdam, autem obcaecati quisquam doloribus minima? Lorem
+            ipsum dolor sit, amet consectetur adipisicing elit. Illum libero
+            modi enim et aut ex perspiciatis soluta sequi iste! Obcaecati fugiat
+            tenetur magnam adipisci pariatur, voluptatibus, eligendi magni
+            debitis, et autem nesciunt temporibus quae repudiandae quia veniam
+            maxime? Sint numquam architecto illo natus enim.Explicabo excepturi
+            iste pariatur quo aut.
+          </div>
+        </div>
 
-      </div>
-
-      <div className="col-md-8  text-light mt-2">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nisi vel itaque eligendi tempore, 
-        nostrum cum temporibus laboriosam ab laudantium exercitationem omnis sequi officia 
-        fuga nesciunt optio eos quibusdam, autem obcaecati quisquam doloribus minima?
-       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum libero modi enim 
-       et aut ex perspiciatis soluta sequi iste! Obcaecati fugiat tenetur magnam adipisci pariatur, 
-       voluptatibus, eligendi magni debitis, et autem nesciunt temporibus quae repudiandae quia veniam maxime? 
-       Sint numquam architecto illo natus enim.Explicabo excepturi iste pariatur quo aut.
-
-       
-
-      </div>
-     
-     
-      </div>
-
-      <div className="row bg-white text-dark mt-2  p-3">
+        {/* <div className="row bg-white text-dark mt-2  p-3">
         <h2> Statistiques d'utilisations     </h2>
         <div className="col">
 
@@ -64,26 +57,22 @@ export const MethodeDetails = () => {
         </div>
 
 
-      </div>
+      </div> */}
 
-      <div className="row bg-white text-dark mt-6  p-3">
-        <h2> Mode d'emploi     </h2>
-        <div className="col">
-
-        <iframe
-                            width="420"
-                            height="315"
-                            src={method.video}
-                            title="YouTube video player"
-                            frameborder="0"
-                          ></iframe>
+        <div className='row bg-white text-dark mt-2  p-3'>
+          <h2> Mode d'emploi </h2>
+          <div className='col d-flex justify-content-center'>
+            <iframe
+              width='900'
+              height='500'
+              src={method.video}
+              title='YouTube video player'
+              frameborder='0'
+            ></iframe>
+          </div>
         </div>
 
-
-      </div>
-
-
-      <div className="row bg-white text-dark mt-6  p-3">
+        {/* <div className="row bg-white text-dark mt-6  p-3">
         <h2> Prendre Rendez-vous    </h2>
         <div className="col-md-6">
         <label htmlFor="cds"> Choisir Provinces</label>
@@ -106,12 +95,8 @@ export const MethodeDetails = () => {
         </div>
 
 
+      </div> */}
       </div>
-
-
-
-    </div>
-    
     </>
   )
 }
