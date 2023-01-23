@@ -47,7 +47,7 @@ const Home = () => {
                 <Link to='/'> Rejoignez la communaute </Link>{' '}
               </div>
               <div className='action_b'>
-                <Link to='/'> CDS jeunes</Link>
+                <Link to='/cdsList'> CDS jeunes</Link>
               </div>
             </div>
           </div>

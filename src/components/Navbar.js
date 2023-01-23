@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { UserContext } from '../context/userContext'
 import { Link, useNavigate } from 'react-router-dom'
 import { signOut, getAuth } from 'firebase/auth'
+import { ArrowBarRight, PersonAdd } from 'react-bootstrap-icons'
 
 const Navbar = () => {
   const navigate = useNavigate()
@@ -40,16 +41,16 @@ const Navbar = () => {
                   toggleModals('SignIn')
                 }}
               >
-                Sign In <i class='bi bi-box-arrow-in-left'></i>
+                Sign In <ArrowBarRight />
               </div>
 
               <div
-                className='nav-item '
+                className='nav-item'
                 onClick={() => {
                   toggleModals('SignUp')
                 }}
               >
-                Sign Up
+                Sign Up <PersonAdd />
               </div>
             </div>
           ) : (
