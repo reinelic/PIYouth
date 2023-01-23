@@ -77,8 +77,8 @@ img {
 .action_a a {
   color: white;
 }
-.action_a::hover {
-  background-color: #180a60;
+.action_a:hover {
+  background-color: #f22e60;
 }
 
 .action_b {
@@ -89,6 +89,16 @@ img {
   padding: 10px;
   border-radius: 5px;
   font-weight: 600;
+}
+.action_b a {
+  color: rgba(35, 171, 142, 1) 0%;
+}
+.action_b:hover {
+  background-color: #f22e60;
+}
+
+.action_b a:hover {
+  color: white;
 }
 
 .methodes {
