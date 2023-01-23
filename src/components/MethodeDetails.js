@@ -5,11 +5,17 @@ import { Link } from 'react-router-dom'
 
 export const MethodeDetails = () => {
   const params = useParams()
+  console.log('params')
+  console.log(params)
 
   const [method, setMethod] = useState({})
 
   const getMethod = async () => {
-    let nMethod = await axios.get(`http://localhost:3004/methodes/${params.id}`)
+    let nMethod = await axios.get(
+      `https://api.npoint.io/21d771eb6ff6e4e0fbe3/methodes/${params.id}`
+    )
+    console.log('Methode data')
+
     console.log(nMethod.data)
     setMethod(nMethod.data)
   }
@@ -69,6 +75,7 @@ export const MethodeDetails = () => {
               title='YouTube video player'
               frameborder='0'
             ></iframe>
+            {/* <iframe width='420' height='315' src={method.video}></iframe> */}
           </div>
         </div>
 

@@ -9,7 +9,7 @@ const Methodes = () => {
   const getMethodes = async () => {
     // const methodesList  = await axios.get('http://localhost:3004/methodes');
     const methodesList = await axios.get(
-      'https://api.npoint.io/7f02a8de0948f845e7eb'
+      'https://api.npoint.io/21d771eb6ff6e4e0fbe3'
     )
     console.log('this is the api')
     console.log(methodesList)

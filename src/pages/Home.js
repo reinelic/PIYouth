@@ -86,7 +86,7 @@ const Home = () => {
               ))}
             </div>
           ) : (
-            <div>Data Loading</div>
+            <div></div>
           )}
 
           <div className='row mt-4 mb-4 border-primary'>
