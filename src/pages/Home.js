@@ -10,18 +10,18 @@ const Home = () => {
   const [cds, setCds] = useState([])
 
   useEffect(() => {
-    // getCDS();
+    getCDS()
   }, [])
 
   const getCDS = async () => {
     const data = await axios.get('https://api.npoint.io/21d771eb6ff6e4e0fbe3')
 
-    console.log(data)
+    console.log('This are the cds')
 
-    setCds(data)
+    console.log(data.data.cds)
+
+    setCds(data.data.cds)
   }
-  console.log('This are the cds')
-  console.log(cds)
 
   return (
     <>
@@ -78,7 +78,7 @@ const Home = () => {
 
           {cds.data ? (
             <div className=' row bg-dark p-4'>
-              {cds.data.map((elt) => (
+              {cds.map((elt) => (
                 <div className='col-md-4'>
                   {' '}
                   <Cds data={elt} />

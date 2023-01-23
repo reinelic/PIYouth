@@ -11,9 +11,9 @@ const Methodes = () => {
     const methodesList = await axios.get(
       'https://api.npoint.io/7f02a8de0948f845e7eb'
     )
-
-    setMethodes(methodesList.data)
-    console.log(methodesList.data)
+    console.log('this is the api')
+    console.log(methodesList)
+    setMethodes(methodesList.data.methodes)
   }
 
   useEffect(() => {
