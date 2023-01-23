@@ -67,7 +67,7 @@ const SignInModal = () => {
                   <div className='modal-header'>
                     <h5 className='modal-title'> Login</h5>
                     <button
-                      className='btn-close btn-dark'
+                      className='btn-close '
                       onClick={() => {
                         toggleModals('Close')
                         setValidation('')
