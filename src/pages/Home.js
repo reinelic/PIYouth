@@ -14,7 +14,7 @@ const Home = () => {
   }, [])
 
   const getCDS = async () => {
-    const data = await axios.get('http://localhost:3004/cds')
+    const data = await axios.get('https://api.npoint.io/21d771eb6ff6e4e0fbe3')
 
     console.log(data)
 
