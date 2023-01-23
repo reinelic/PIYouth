@@ -5,7 +5,6 @@ import Cds from '../components/Cds'
 import axios from 'axios'
 import Methodes from '../components/Methodes'
 import { Activites } from '../components/Activites'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [cds, setCds] = useState([])
@@ -28,32 +27,20 @@ const Home = () => {
     <>
       <div className='container-fluid'>
         <div className=' row home flex '>
-          <div className=' col-5 home_info'>
-            <h1 className='home_info--title'>
-              <span> Jeunesse Resiliente</span> <br />
+          <div className=' col-3 bg-danger'>
+            <img
+              className='position-absolute top-30 start-60 man'
+              src='/man.jpg'
+              alt='young man'
+            />
+          </div>
+          <div className='col-9 '>
+            <img className='girl' src='/muslimgirl.jpg' alt='girl' />
+
+            <h1 className='home_info'>
+              Jeunesse Resiliente <br />
               Un monde Resilient
             </h1>
-
-            <div className='home_info--body'>
-              Pathfinder Burundi aide les jeunes a avoir acces a une sante
-              sexuelle et reproductive saine. Rejoignez la communaute des jeunes
-              PI pour beneficier de l'education et services en sante sexuelle et
-              reproductive
-            </div>
-
-            <div className='home_info--action d-flex'>
-              <div className='action_a'>
-                {' '}
-                <Link to='/'> Rejoignez la communaute </Link>{' '}
-              </div>
-              <div className='action_b'>
-                <Link to='/'> CDS jeunes</Link>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-7 '>
-            <img className='girl' src='/muslimgirl.png' alt='girl' />
           </div>
         </div>
 

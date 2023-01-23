@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav className='navbar navbar-light bg-light px-4 '>
-      <Link to='' className='navbar-brand mb-0 h1 text-primary '>
+      <Link to='' className='navbar-brand mb-0 h1 text-danger '>
         Pathfinder Burundi
       </Link>
 
@@ -40,7 +40,7 @@ const Navbar = () => {
                   toggleModals('SignIn')
                 }}
               >
-                Sign In
+                Sign In <i class='bi bi-box-arrow-in-left'></i>
               </div>
 
               <div
