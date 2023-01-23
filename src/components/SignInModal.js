@@ -57,7 +57,7 @@ const SignInModal = () => {
         <div className='position-fixed top-0 vw-100 vh-100 signinmodal'>
           <div className='w-100 h-100 bg-danger p-20 d-flex justify-content-around align-items-center border-info'>
             <div className='form-info w-50 h-100 align-middle fs-2 p-4'>
-              Bienvenue sur la plateforme dediee aux Jeunesse
+              Bienvenue sur la plateforme dediee a la jeunesse
             </div>
 
             {/* <div className="position-absolute top-50 start-50 translate-middle "> */}
