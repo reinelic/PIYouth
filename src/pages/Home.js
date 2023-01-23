@@ -6,6 +6,7 @@ import axios from 'axios'
 import Methodes from '../components/Methodes'
 import { Activites } from '../components/Activites'
 import { Link } from 'react-router-dom'
+import { Hospital } from 'react-bootstrap-icons'
 
 const Home = () => {
   const [cds, setCds] = useState([])
@@ -47,7 +48,10 @@ const Home = () => {
                 <Link to='/'> Rejoignez la communaute </Link>{' '}
               </div>
               <div className='action_b'>
-                <Link to='/cdsList'> CDS jeunes</Link>
+                <Link to='/cdsList'>
+                  <span className='mr-2'> CDS jeunes</span>{' '}
+                  <Hospital size={48} />
+                </Link>
               </div>
             </div>
           </div>
