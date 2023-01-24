@@ -51,8 +51,8 @@ const Home = () => {
 
 </div>     */}
 
-          <div className='bg-light d-flex justify-content-around pt-6 pb-6 '>
-            <div className='w-50 contra p-2'>
+          <div className='bg-dark d-flex justify-content-around '>
+            <div className='w-50 contra p-2 border-right-2'>
               <img
                 src='/contra_component.png'
                 alt=''

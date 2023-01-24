@@ -57,7 +57,7 @@ const Home = () => {
           </div>
 
           <div className='col-7 '>
-            <img className='girl' src='/muslimgirl.png' alt='girl' />
+            <img className='home__img' src='/muslimgirl.png' alt='girl' />
           </div>
         </div>
 
@@ -76,7 +76,7 @@ const Home = () => {
                 className='component mb-2'
               />
 
-              <div className='text-dark mt-4 '>
+              <div className='text-dark mt-4 w-70 '>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam quas nobis itaque mollitia aut corporis praesentium
                 libero doloribus tempore, facere ut alias, cum commodi voluptas

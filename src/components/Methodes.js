@@ -40,7 +40,7 @@ const Methodes = () => {
     <>
       <Link to={`/${method.id}`}>
         {' '}
-        <div key={method.id} className='moyen text-center'>
+        <div key={method.id} className='moyen text-center pt-'>
           <img src={method.methodeUrl} className='icone methodIcon' alt='' />
           <div className=''>{method.methodeName}</div>
         </div>

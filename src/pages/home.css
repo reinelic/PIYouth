@@ -6,6 +6,8 @@
   background-size: cover;
   background-repeat: repeat;
   overflow: hidden;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .home_1 {
   height: 600px;
@@ -29,9 +31,9 @@ img {
   overflow: clip;
 }
 
-.girl {
+.home__img {
   width: 866px;
-  height: 900px;
+  height: 100vh;
   /* position: relative;
   left: 300px; */
   background-color: rgb(205, 190, 219);
@@ -40,8 +42,10 @@ img {
 .home_info {
   background-color: #dae1f7;
   opacity: 0.9;
-  padding-top: 15%;
+  padding-top: 5%;
   padding-left: 48px;
+  height: 100vh;
+  border-right: 1px solid black;
 }
 
 .home_info--title {
