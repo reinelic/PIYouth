@@ -1,27 +1,34 @@
 import React, { useContext, useRef, useState } from 'react'
 import { UserContext } from '../context/userContext'
 import { useNavigate } from 'react-router-dom'
-import { useForm } from 'react-hook-form'
 
 const SignUpModal = () => {
   const { modalState, toggleModals, signUp } = useContext(UserContext)
   const [validation, setValidation] = useState('')
-
-  // Uing react hook form
-  const {
-    register,
-    watch,
-    formState: { errors },
-    handleSubmit,
-  } = useForm()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [password2, setPassword2] = useState('')
 
   const navigate = useNavigate()
 
-  const onSubmit = async (data) => {
-    console.log(data)
+  const handleForm = async (e) => {
+    e.preventDefault()
+    setValidation(' ')
+
+    if (password.length < 6 || password2.length < 6) {
+      console.log('Password not long enough')
+
+      setValidation('6 characteres minimum')
+      return
+    } else if (password !== password2) {
+      setValidation('Password do not match')
+      return
+    }
+
     try {
-      const cred = await signUp(data.email, data.password)
+      const cred = await signUp(email, password)
       console.log(cred)
+
       setValidation('')
 
       navigate('/private/private-home')
@@ -61,27 +68,20 @@ const SignUpModal = () => {
                   </div>
 
                   <div className='modal-body'>
-                    <form
-                      onSubmit={handleSubmit(onSubmit)}
-                      className='sign-up-form'
-                    >
+                    <form onSubmit={handleForm} className='sign-up-form'>
                       <div className='mb-3'>
                         <label className='form-label' htmlFor='SignUpEmail'>
                           Email Address
                         </label>
-
                         <input
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          type='email'
+                          name='email'
                           className='form-control'
-                          {...register('email', {
-                            required: true,
-                            pattern: {
-                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                              message: 'Please enter a valid email',
-                            },
-                          })}
-                          aria-invalid={errors.email ? 'true' : 'false'}
+                          id='SignUpEmail'
+                          required
                         />
-                        {errors.email && <> {errors.email.message} </>}
                       </div>
 
                       <div className='mb-3'>
@@ -89,22 +89,14 @@ const SignUpModal = () => {
                           Password
                         </label>
                         <input
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                           type='password'
+                          name='pwd'
                           className='form-control'
-                          {...register('password', {
-                            required: true,
-                            pattern:
-                              /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/,
-                          })}
+                          id='SignUpPassword'
+                          required
                         />
-
-                        {errors.password && (
-                          <p>
-                            {' '}
-                            Password must contain at least 1 special character,
-                            1 cap letter, and 1 number
-                          </p>
-                        )}
                       </div>
 
                       <div className='mb-3'>
@@ -112,24 +104,20 @@ const SignUpModal = () => {
                           Repeat Password
                         </label>
                         <input
+                          value={password2}
+                          onChange={(e) => setPassword2(e.target.value)}
                           type='password'
+                          name='pwd'
                           className='form-control'
-                          {...register('password2', {
-                            required: true,
-                            validate: (val) => {
-                              if (watch('password') != val) {
-                                return 'Your passwords do no match'
-                              }
-                            },
-                          })}
+                          id='SignUpPassword'
+                          required
                         />
-                        {errors.password2 && errors.password2.message}
                       </div>
+
+                      <h4 className='text-danger '>{validation}</h4>
 
                       <button className='btn btn-primary'>Submit</button>
                     </form>
-
-                    <p>{validation}</p>
                   </div>
                 </div>
               </div>

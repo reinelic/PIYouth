@@ -1,45 +1,28 @@
 import React, { useContext, useRef, useState, useEffect } from 'react'
 import { UserContext } from '../context/userContext'
 import { useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { validateArgCount } from '@firebase/util'
 
 const SignInModal = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-
   const { modalState, toggleModals, signIn } = useContext(UserContext)
   const [validation, setValidation] = useState('')
 
   const navigate = useNavigate()
 
-  // const inputs = useRef([]);
+  const {
+    register,
+    watch,
+    formState: { errors },
+    handleSubmit,
+  } = useForm()
 
-  // const addInputs =(el)=>{
-
-  //     console.log('Inputs length')
-  //     console.log(inputs.current.length);
-  //     console.log(inputs.current)
-  //     console.log(el)
-
-  //     if(el && !inputs.current.includes(el)){
-  //         inputs.current.push(el)
-  //     }
-  // }
-
-  // const formRef =useRef();
-
-  const handleForm = async (e) => {
-    e.preventDefault()
-    // console.log(formRef)
-
+  const onSubmit = async (data) => {
     try {
-      console.log(email, password)
-      const cred = await signIn(email, password)
+      console.log(data.email, data.password)
+      const cred = await signIn(data.email, data.password)
       console.log(cred)
-      // formRef.current.reset();
       setValidation('')
-      setEmail('')
-      setPassword('')
-
       navigate('/private/private-home')
 
       toggleModals('Close')
@@ -48,8 +31,6 @@ const SignInModal = () => {
       setValidation('Email or password incorrect!')
     }
   }
-
-  // console.log(inputs);
 
   return (
     <>
@@ -76,20 +57,26 @@ const SignInModal = () => {
                   </div>
 
                   <div className='modal-body'>
-                    <form onSubmit={handleForm} className='sign-up-form'>
+                    <form
+                      onSubmit={handleSubmit(onSubmit)}
+                      className='sign-up-form'
+                    >
                       <div className='mb-3'>
                         <label className='form-label' htmlFor='SignInEmail'>
                           Email Address
                         </label>
                         <input
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          type='email'
-                          name='email'
                           className='form-control'
-                          id='SignUpEmail'
-                          required
+                          {...register('email', {
+                            required: true,
+                            pattern: {
+                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                              message: 'Please enter a valid email',
+                            },
+                          })}
+                          aria-invalid={errors.email ? 'true' : 'false'}
                         />
+                        {errors.email && <> {errors.email.message} </>}
                       </div>
 
                       <div className='mb-3'>
@@ -97,20 +84,19 @@ const SignInModal = () => {
                           Password
                         </label>
                         <input
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
                           type='password'
-                          name='pwd'
                           className='form-control'
-                          id='SignUpPassword'
-                          required
+                          {...register('password', {
+                            required: true,
+                          })}
                         />
-                      </div>
 
-                      <h4 className='text-danger '>{validation}</h4>
+                        {errors.password && <p> Please enter a password</p>}
+                      </div>
 
                       <button className='btn btn-primary'>Submit</button>
                     </form>
+                    <p>{validation}</p>
                   </div>
                 </div>
               </div>
