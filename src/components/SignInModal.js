@@ -4,8 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { validateArgCount } from '@firebase/util'
 
+import { auth } from '../firebase-config'
+
 const SignInModal = () => {
-  const { modalState, toggleModals, signIn } = useContext(UserContext)
+  const { modalState, toggleModals, signIn, signInWithGoogle } =
+    useContext(UserContext)
   const [validation, setValidation] = useState('')
 
   const navigate = useNavigate()
@@ -17,6 +20,12 @@ const SignInModal = () => {
     handleSubmit,
   } = useForm()
 
+  const signInWithG = async () => {
+    const result = await signInWithGoogle()
+    console.log('result', result)
+    navigate('/private/private-home')
+    toggleModals('Close')
+  }
   const onSubmit = async (data) => {
     try {
       console.log(data.email, data.password)
@@ -94,9 +103,21 @@ const SignInModal = () => {
                         {errors.password && <p> Please enter a password</p>}
                       </div>
 
-                      <button className='btn btn-primary'>Submit</button>
+                      <button className='btn btn-primary'>Sign In</button>
                     </form>
-                    <p>{validation}</p>
+                    <div>
+                      {' '}
+                      <button
+                        className='btn btn-info mt-2'
+                        onClick={() => {
+                          signInWithG()
+                        }}
+                      >
+                        {' '}
+                        Sign In with Google
+                      </button>
+                    </div>
+                    <p>{validation}</p> <p> New user ? Click here </p>
                   </div>
                 </div>
               </div>
