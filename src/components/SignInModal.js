@@ -3,6 +3,8 @@ import { UserContext } from '../context/userContext'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { validateArgCount } from '@firebase/util'
+import { Google } from 'react-bootstrap-icons'
+import { Link } from 'react-router-dom'
 
 import { auth } from '../firebase-config'
 
@@ -103,21 +105,29 @@ const SignInModal = () => {
                         {errors.password && <p> Please enter a password</p>}
                       </div>
 
-                      <button className='btn btn-primary'>Sign In</button>
+                      <button className='btn btn-primary'>Sign In </button>
                     </form>
                     <div>
-                      {' '}
+                      <p>{validation}</p>{' '}
+                      <p>
+                        {' '}
+                        New user ?{' '}
+                        <Link to='/'>
+                          {' '}
+                          <span> Click here</span>{' '}
+                        </Link>
+                        {' or '}
+                      </p>{' '}
                       <button
-                        className='btn btn-info mt-2'
+                        className='btn btn-secondary mt-2'
                         onClick={() => {
                           signInWithG()
                         }}
                       >
                         {' '}
-                        Sign In with Google
+                        Sign In with Google <Google size={24} ml={4} />
                       </button>
                     </div>
-                    <p>{validation}</p> <p> New user ? Click here </p>
                   </div>
                 </div>
               </div>
