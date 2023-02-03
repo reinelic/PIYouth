@@ -27,11 +27,12 @@
 
 .home__img {
   background-image: url('../../public/muslimgirl.png'),
-    url('../../public/Vectortest.svg');
+    url('../../public/Vectorgreen.svg');
   background-position: bottom 30px right 30px, bottom right -100px;
   background-repeat: no-repeat;
   background-size: cover, 50%;
-  border-bottom: #3b48f9 1px;
+
+  border: 1px solid black;
 }
 
 .home_info {
@@ -44,6 +45,7 @@
   opacity: 0.95;
   padding: 5%;
   padding-left: 48px;
+  border: 1px solid black;
 }
 
 .home_info--title {
