@@ -1,41 +1,49 @@
-.* {
-  border: ;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
 .home {
   /* background-image:url('/public/pattern.jpg'); */
 
   background-color: #f8faff;
   z-index: -2;
   position: relative;
-  height: 700px;
+  padding: 2%;
 }
 
 .svg_info {
   position: absolute;
-  z-index: -1;
-  height: 60%;
-  width: 200%;
-  top: 0;
-  left: -30%;
+  z-index: -2;
+  top: -10%;
+  left: 40px;
+  width: 30%;
+
   opacity: 0.8;
-  color: #e6e7f2;
-  rotate: 130deg;
+
+  /* transform: rotate(20deg); */
 }
 
 .home__img {
-  height: 80%;
-  width: 90%;
-
-  background-color: rgb(205, 190, 219);
+  background-image: url('../../public/muslimgirl.png'),
+    url('../../public/Vectortest.svg');
+  background-position: bottom 30px right 30px, bottom right -100px;
+  background-repeat: no-repeat;
+  background-size: cover, 50%;
+  border-bottom: #3b48f9 1px;
 }
 
 .home_info {
   background-color: #3765ea;
-  opacity: 0.9;
-  padding-top: 5%;
+  background-image: url('../../public/Vectortest.svg');
+  background-repeat: no-repeat;
+  background-blend-mode: color-dodge;
+  background-position: top left;
+  background-size: 70%;
+  opacity: 0.95;
+  padding: 5%;
   padding-left: 48px;
-  height: 100%;
-  border-right: 1px solid black;
 }
 
 .home_info--title {
