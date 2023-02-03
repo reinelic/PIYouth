@@ -70,7 +70,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='col-7 '>
+          <div className='col-7'>
             <img className='home__img' src='/muslimgirl.png' alt='girl' />
           </div>
         </div>

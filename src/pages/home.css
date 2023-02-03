@@ -4,15 +4,17 @@
   background-color: #f8faff;
   z-index: -2;
   position: relative;
+  height: 700px;
 }
 
 .svg_info {
   position: absolute;
   z-index: -1;
   height: 60%;
+  width: 200%;
   top: 0;
-  left: -50%;
-  opacity: 0.7;
+  left: -30%;
+  opacity: 0.8;
   color: #e6e7f2;
 }
 .home_1 {
@@ -23,24 +25,10 @@
   background-color: #2b3169;
 }
 
-img {
-  /*     
-    width: auto;
-    height: auto; */
-  object-fit: cover;
-  z-index: 1;
-}
-
-.man {
-  width: 40%;
-  overflow: clip;
-}
-
 .home__img {
-  width: 866px;
-  height: 100vh;
-  /* position: relative;
-  left: 300px; */
+  height: 80%;
+  width: 90%;
+
   background-color: rgb(205, 190, 219);
 }
 
@@ -49,7 +37,7 @@ img {
   opacity: 0.9;
   padding-top: 5%;
   padding-left: 48px;
-  height: 100vh;
+  height: 100%;
   border-right: 1px solid black;
 }
 
