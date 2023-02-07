@@ -29,7 +29,7 @@ const Home = () => {
     <>
       <div className='container-fluid wrapper'>
         <div className=' row home flex '>
-          <div className=' col-5 home_info'>
+          <div className=' col-7 home_info'>
             {/* <svg
               className='svg_info'
               width='800'
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='col-7 home__img'></div>
+          <div className='col-5 home__img'></div>
         </div>
 
         <div className='container-fluid methodes'>

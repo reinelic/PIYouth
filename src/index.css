@@ -1,3 +1,7 @@
+/* :root {
+  --clr-primary: ;
+} */
+
 html {
   font-style: 62.5%;
 }
@@ -5,6 +9,12 @@ html {
 body {
   margin: 0;
   font-family: 'Monserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 code {

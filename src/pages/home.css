@@ -1,8 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 .home {
   /* background-image:url('/public/pattern.jpg'); */
@@ -32,7 +27,8 @@
   background-repeat: no-repeat;
   background-size: cover, 50%;
 
-  border: 1px solid black;
+  border: 1px solid #00b3d286;
+  /* background-color: #e96b88; */
 }
 
 .home_info {
@@ -42,10 +38,21 @@
   background-blend-mode: color-dodge;
   background-position: top left;
   background-size: 70%;
-  opacity: 0.95;
+  opacity: 1;
   padding: 5%;
   padding-left: 48px;
-  border: 1px solid black;
+  position: relative;
+  /* border: 1px solid #f94a5f; */
+}
+
+.home_info::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: #3b48f9;
+  -webkit-mask-image: url('../../public/Vectorgreen.svg');
 }
 
 .home_info--title {
@@ -105,12 +112,6 @@
 .methodes {
   height: 1500px;
   color: aliceblue;
-}
-
-.pattern-component {
-  width: 45%;
-  height: 40%;
-  background-image: ;
 }
 
 .form-info {
