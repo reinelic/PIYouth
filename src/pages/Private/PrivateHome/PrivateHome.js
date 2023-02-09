@@ -4,12 +4,12 @@ const PrivateHome = () => {
   return (
     <div className='container'>
       <div className=' '>
-        <div className='row bg-white text-primary-100 p-5 px-6 mt-2'>
-          <div className='col-md-4'>
+        <div className='row bg-white text-primary-100 p-2  mt-2'>
+          <div className='col-md-5'>
             <img src='' alt='' class='img-thumbnail' />
             <h5> Country Director du Burundi</h5>
           </div>
-          <div className='col-md-8'>
+          <div className='col-md-7'>
             <h5 className='text-muted'> Mot du Country Director</h5>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
             deleniti tenetur veritatis est facilis eius reprehenderit aut odit!

@@ -52,7 +52,7 @@ const Methodes = () => {
 
   return (
     <>
-      <div className='text-dark text-muted bg-body-primary'>
+      <div className='text-dark text-muted bg-body-primary col-md-5 p-4'>
         <div className='first d-flex '>{firstMethodes}</div>
 
         <div className='second d-flex  '>{secondMethodes}</div>

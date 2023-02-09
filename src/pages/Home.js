@@ -29,7 +29,7 @@ const Home = () => {
     <>
       <div className=' wrapper'>
         <div className=' row home  flex '>
-          <div className=' col-7 home_info'>
+          <div className=' col-md-7 home_info'>
             {/* <svg
               className='svg_info'
               width='800'
@@ -70,7 +70,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className='col-5 home__img'></div>
+          <div className='col-md-5 home__img'></div>
         </div>
 
         <div className='container-fluid methodes'>
@@ -80,8 +80,8 @@ const Home = () => {
 
 </div>     */}
 
-          <div className='  bg-body-primary d-flex justify-content-around pt-6 pb-6 '>
-            <div className='w-50 contra p-2 '>
+          <div className=' row bg-body-primary '>
+            <div className='col-md-7 contra'>
               <img
                 src='/contra_component.png'
                 alt=''

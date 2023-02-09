@@ -233,6 +233,11 @@ a:active {
   background-color: var(--cl-primary-500);
 }
 
+.bg-primary-300 {
+
+  background-color: var(--cl-primary-300);
+}
+
  
  
  .bg-button{
