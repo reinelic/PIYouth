@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <div className=' wrapper'>
+      <div className='container-fluid '>
         <div className=' row home  flex '>
           <div className=' col-md-7 home_info'>
             {/* <svg

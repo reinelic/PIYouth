@@ -26,14 +26,12 @@ export const Activites = () => {
               </div> */}
             <div className='activities container-fluid  text-dark overflow-hidden'>
               <img src='/lines.png' alt='' className='d-inline' />{' '}
-              <h2 className='text-primary-200 text-center d-inline'>
-                Activities
-              </h2>
+              <h2 className='text-accent text-center d-inline'>Activities</h2>
               <div className='row mb-2'>
                 <div className='col-12 position-relative'>
                   <img src={slideImage.url} alt='' className='img_act' />
 
-                  <div className='position-absolute start-50 top-0 w-30 h-60 bg-accent text-primary-200  border-info p-4 mt-3'>
+                  <div className='act-info  bg-accent text-primary-200  border-info p-4 mt-3'>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Cupiditate accusantium, alias praesentium officiis
                     repudiandae consectetur perferendis repellendus eos?
