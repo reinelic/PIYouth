@@ -26,10 +26,10 @@ export const MethodeDetails = () => {
 
   return (
     <>
-      <div className='container text-light  mt-2'>
+      <div className='container text-primary-100  mt-2'>
         <div>
           {' '}
-          <Link to='/' className='text-light'>
+          <Link to='/' className=''>
             Retour
           </Link>
         </div>
@@ -37,11 +37,11 @@ export const MethodeDetails = () => {
         <div className='row mb-3'>
           <h4> La methode de contraception - {method.methodeName} </h4>
 
-          <div className='col-md-4  text-light mt-2'>
+          <div className='col-md-4   mt-2'>
             <img className='img-fluid img' src={method.methodeUrl} />
           </div>
 
-          <div className='col-md-8  text-light mt-2 '>
+          <div className='col-md-8  text-primary-100 mt-2 '>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo nisi
             vel itaque eligendi tempore, nostrum cum temporibus laboriosam ab
             laudantium exercitationem omnis sequi officia fuga nesciunt optio
@@ -65,7 +65,7 @@ export const MethodeDetails = () => {
 
       </div> */}
 
-        <div className='row bg-white text-dark mt-2  p-3'>
+        <div className='row bg-accent text-primary-200 mt-2  p-3'>
           <h2> Mode d'emploi </h2>
           <div className='col d-flex justify-content-center'>
             <iframe

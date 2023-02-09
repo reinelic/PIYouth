@@ -29,7 +29,7 @@ const Methodes = () => {
     <>
       <Link to={`/${method.id}`}>
         <div key={method.id} className='moyen text-center '>
-          <img src={method.methodeUrl} className='icone methodIcon' alt='' />
+          <img src={method.methodeUrl} className='icone methodIcon ' alt='' />
           <div>{method.methodeName}</div>
         </div>
       </Link>
@@ -52,57 +52,10 @@ const Methodes = () => {
 
   return (
     <>
-      <div className='text-dark text-muted'>
-        <div className='first d-flex '>
-          {firstMethodes}
+      <div className='text-dark text-muted bg-body-primary'>
+        <div className='first d-flex '>{firstMethodes}</div>
 
-          {/* <div className="moyen text-center">
-     
-         <img src="/preservatif.png" className='icone' alt="" />
-         <div className="">preservatif</div>
-     
-     </div>
-
-     <div className="moyen text-center">
-
-         <img src="/diaphragme.png" className='icone' alt="" />
-         <div className="">Diaphragme</div>
-     </div>
-
-     <div className="moyen text-center">
-
-         <img src="/Injections.png" className='icone' alt="" />
-         <div className="">Injections</div>
-     </div> */}
-        </div>
-
-        <div className='second d-flex  '>
-          {secondMethodes}
-
-          {/* <div className="moyen text-center">
-         
-               <img src="/Anneau.png" className='icone' alt="" />
-               <div className="">Anneau</div>
-       
-         </div>
-
-         <div className="moyen text-center ">
-
-            <img src="/Idu.png" className='icone' alt="" />
-            <div className="">Idu</div>
-
-        </div>
-
-
-      <div className="moyen text-center">
-
-         <img src="/Sayana.png" className='icone' alt="" />
-         <div className="">Sayana</div>
-
-       </div>
-
- */}
-        </div>
+        <div className='second d-flex  '>{secondMethodes}</div>
       </div>
     </>
   )

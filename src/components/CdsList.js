@@ -43,7 +43,7 @@ const CdsList = () => {
   return (
     <div className='container  mt-2 '>
       <div className='filtre'>
-        <label htmlFor='' className='h5 text-light diplay-2'>
+        <label htmlFor='' className='h5 text-primary-100 diplay-2'>
           {' '}
           <i className='bi bi-hospital-fill'></i> Selectionner une region pour
           acceder aux centres des jeunes :{' '}
@@ -63,10 +63,10 @@ const CdsList = () => {
         filtered.map((elt) => (
           <>
             <div className='card mb-3'>
-              <div className='card-header bg-primary text-light'>
+              <div className='card-header bg-accent text-primary-200'>
                 CDS Amis des jeunes - {elt.Location}
               </div>
-              <div className='card-body '>
+              <div className='card-body text-primary-100'>
                 <h5 className='card-title '>Nom du CDS: {elt.name} </h5>
                 <p className='card-text'>
                   With supporting text below as a natural lead-in to additional
