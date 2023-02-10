@@ -54,7 +54,7 @@
 
 .wrapper {
 
-  --max-width:1110px;
+  --max-width:1400px;
   --padding:1rem;
 
   width: min(var(--max-width) , 100% - (var(--padding) * 2));
