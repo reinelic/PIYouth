@@ -27,14 +27,10 @@ const Home = () => {
 
   return (
     <>
-      <div className='container-fluid '>
+      <div className='container-fluid wrapper'>
         <div className=' row home  flex '>
           <div className=' col-md-7 home_info'>
-            {/* <svg
-              className='svg_info'
-              width='800'
-              height='630'
-              viewBox='0 0 800 630'
+            {/* <svg 
               fill='white'
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -73,7 +69,7 @@ const Home = () => {
           <div className='col-md-5 home__img'></div>
         </div>
 
-        <div className='container-fluid methodes'>
+        <div className='container-fluid methodes padding-block-big'>
           {/* <div className=" bg-danger position-relative top-0 w-25">
 
 <h4> Les Methodes de contraception</h4> 

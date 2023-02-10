@@ -17,7 +17,7 @@ export const Activites = () => {
   ]
 
   return (
-    <div className='bg-body-primary'>
+    <div className='bg-body-primary padding-block-big'>
       <Slide>
         {slideImages.map((slideImage, index) => (
           <div className='each-slide' key={index}>
