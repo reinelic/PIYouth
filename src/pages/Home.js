@@ -39,13 +39,13 @@ const Home = () => {
                 fill='#0F3C44'
               />
             </svg> */}
-            <h1 className='home_info--titl e fw-bold text-primary-200'>
+            <h1 className='home_info--titl e fw-bold fs-primary-heading text-primary-200'>
               <span class='text-accent-heading '> Jeunesse Resiliente</span>{' '}
               <br />
               Un monde Resilient
             </h1>
 
-            <div className='home_info--body text-primary-200 fs-body'>
+            <div className='home_info--body text-primary-200 fs-section'>
               Pathfinder Burundi aide les jeunes a avoir acces a une sante
               sexuelle et reproductive saine. Rejoignez la communaute des jeunes
               PI pour beneficier de l'education et services en sante sexuelle et
@@ -84,7 +84,7 @@ const Home = () => {
                 className='component mb-2'
               />
 
-              <div className='text-primary-100 mt-4 w-70 '>
+              <div className='text-primary-100 mt-4 w-70 fs-section '>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Aperiam quas nobis itaque mollitia aut corporis praesentium
                 libero doloribus tempore, facere ut alias, cum commodi voluptas
@@ -119,7 +119,7 @@ const Home = () => {
             </div>
 
             <div className='col-md-8 text-dark bg-white p-3'>
-              <div className='text-muted'>
+              <div className='text-muted fs-section'>
                 {' '}
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Quaerat alias, suscipit iusto nam culpa corporis possimus illo
