@@ -25,7 +25,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='navbar navbar-light bg-light px-4 '>
+    <nav className='navbar navbar-light bg-light px-4 box-shadow'>
       <Link to='' className='navbar-brand mb-0 h1 text-danger '>
         Pathfinder Burundi
       </Link>
