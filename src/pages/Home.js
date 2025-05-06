@@ -64,7 +64,7 @@ const Home = () => {
           <div className='row bg-body-primary'>
             <div className='col-md-7 contra'>
               <img
-                src='/woman_market.jpg'
+                src='act2.jpg'
                 alt='Femmes entrepreneures'
                 className='component mb-2'
               />
