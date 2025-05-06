@@ -67,7 +67,7 @@ const SignUpModal = () => {
                     >
                       <div className='mb-3'>
                         <label className='form-label' htmlFor='SignUpEmail'>
-                          Email Address
+                          Addresse Email
                         </label>
 
                         <input
@@ -86,7 +86,7 @@ const SignUpModal = () => {
 
                       <div className='mb-3'>
                         <label className='form-label' htmlFor='SignUpPwd'>
-                          Password
+                          Mot de passe
                         </label>
                         <input
                           type='password'
@@ -101,8 +101,8 @@ const SignUpModal = () => {
                         {errors.password && (
                           <p>
                             {' '}
-                            Password must contain at least 1 special character,
-                            1 cap letter, and 1 number
+                            Le mot de passe doit contenir au moins un caractere
+                            special, une lettre majuscule et un chiffre
                           </p>
                         )}
                       </div>
@@ -126,7 +126,7 @@ const SignUpModal = () => {
                         {errors.password2 && errors.password2.message}
                       </div>
 
-                      <button className='btn btn-primary'>Submit</button>
+                      <button className='btn btn-primary'>Soumettre</button>
                     </form>
 
                     <p>{validation}</p>

@@ -46,14 +46,14 @@ const SignInModal = () => {
   return (
     <>
       {modalState.signInModal && (
-        <div className='position-fixed top-0 vw-100 vh-100 signinmodal'>
-          <div className='w-100 h-100 bg-danger p-20 d-flex justify-content-around align-items-center border-info'>
-            <div className='form-info w-50 h-100 align-middle fs-2 p-4 fw-bold text-accent'>
+        <div className='position-fixed vw-100 vh-100 signinmodal top-0'>
+          <div className='w-100 h-100 bg-danger d-flex justify-content-around align-items-center border-info p-20'>
+            <div className='form-info w-50 h-100 fs-2 fw-bold text-accent p-4 align-middle'>
               Bienvenue sur la plateforme dediee aux femmes SUMA
             </div>
 
             {/* <div className="position-absolute top-50 start-50 translate-middle "> */}
-            <div className='form w-50 h-100 p-5 text-light'>
+            <div className='form w-50 h-100 text-light p-5'>
               <div className='modal-dialog'>
                 <div className='modal-content'>
                   <div className='modal-header'>
@@ -74,7 +74,7 @@ const SignInModal = () => {
                     >
                       <div className='mb-3'>
                         <label className='form-label' htmlFor='SignInEmail'>
-                          Email Address
+                          Addresse email
                         </label>
                         <input
                           className='form-control'
@@ -92,7 +92,7 @@ const SignInModal = () => {
 
                       <div className='mb-3'>
                         <label className='form-label' htmlFor='SignInPwd'>
-                          Password
+                          Mot de passe
                         </label>
                         <input
                           type='password'
@@ -111,7 +111,7 @@ const SignInModal = () => {
                       <p>{validation}</p>{' '}
                       <p>
                         {' '}
-                        New user ?{' '}
+                        Nouveau utilisateur ?{' '}
                         <span
                           onClick={() => {
                             toggleModals('SignUp')
@@ -119,7 +119,7 @@ const SignInModal = () => {
                           className='text-accent '
                         >
                           {' '}
-                          Click here{' '}
+                          Cliquez ici{' '}
                         </span>
                         {' or '}
                       </p>{' '}
@@ -130,7 +130,7 @@ const SignInModal = () => {
                         }}
                       >
                         {' '}
-                        Sign In with Google <Google size={24} ml={4} />
+                        Connectez-vous avec Google <Google size={24} ml={4} />
                       </button>
                     </div>
                   </div>
