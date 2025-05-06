@@ -63,11 +63,11 @@ const Home = () => {
         <div className='container-fluid methodes padding-block-big'>
           <div className='row bg-body-primary'>
             <div className='col-md-7 contra'>
-              {/* <img
-                src='/contra_component.png'
+              <img
+                src='/woman_market.jpg'
                 alt='Femmes entrepreneures'
                 className='component mb-2'
-              /> */}
+              />
               <div className='text-primary-100 w-70 fs-section mt-4'>
                 <h3>Notre Approche Holistique</h3>
                 <p>
