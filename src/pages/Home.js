@@ -73,7 +73,7 @@ const Home = () => {
                 <p>
                   Nous combinons accès au financement, formation en gestion
                   d'entreprise, et mentorat pour créer un écosystème complet de
-                  soutien aux femmes.
+                  soutien aux femmes en utilisant les technologies NLP .
                 </p>
               </div>
             </div>
