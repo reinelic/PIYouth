@@ -108,9 +108,7 @@ const Home = () => {
                   Notre modèle prouve que l'autonomisation financière des femmes
                   transforme des vies et stimule le développement local.
                 </p>
-                <button className='btn btn-accent'>
-                  Voir nos réussites <ArrowRight />
-                </button>
+                <button className='btn btn-accent'>Voir nos réussites</button>
               </div>
             </div>
           </div>
