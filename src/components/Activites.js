@@ -60,10 +60,11 @@ export const Activites = () => {
                   <img src={slideImage.url} alt='' className='img_act' />
 
                   <div className='act-info  bg-accent text-primary-200  border-info mt-3 p-4'>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Cupiditate accusantium, alias praesentium officiis
-                    repudiandae consectetur perferendis repellendus eos?
-                    Consequatur, quas!
+                    Notre plateforme offre des solutions financières adaptées
+                    pour aider les femmes entrepreneures vulnérables à
+                    développer leurs petites entreprises. Accès à des
+                    microcrédits, formations en gestion et accompagnement
+                    personnalisé.
                   </div>
                 </div>
               </div>
