@@ -25,9 +25,9 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='navbar navbar-light bg-light px-4 box-shadow'>
-      <Link to='' className='navbar-brand mb-0 h1 text-danger '>
-        Pathfinder Burundi
+    <nav className='navbar navbar-light bg-light box-shadow px-4'>
+      <Link to='' className='navbar-brand h1 text-danger mb-0 '>
+        SUMA
       </Link>
 
       <div className=' '>
@@ -36,7 +36,7 @@ const Navbar = () => {
           {!currentUser ? (
             <div className='navbar-nav d-flex flex-row'>
               <div
-                className='nav-item px-2 text-danger'
+                className='nav-item text-danger px-2'
                 onClick={() => {
                   toggleModals('SignIn')
                 }}

@@ -83,12 +83,7 @@ const Home = () => {
                 className='component mb-2'
               />
 
-              <div className='text-primary-100 w-70 fs-section mt-4 '>
-                Face aux problemes de non education financiere , SUMA a mis en
-                place une plateforme aidant les femmes a avoir acces aux
-                services financiers et a les equiper avec les ressources pour
-                faire face a leurs besoins.
-              </div>
+              <div className='text-primary-100 w-70 fs-section mt-4 '></div>
             </div>
 
             {/* Methodes  */}
