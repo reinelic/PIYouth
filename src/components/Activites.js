@@ -9,11 +9,39 @@ export const Activites = () => {
     {
       url: '/act1.jpg',
       caption: 'Activite 1',
+      content: (
+        <>
+          <h3 className='fw-bold'>Autonomisation Financière des Femmes</h3>
+          <p>
+            Notre plateforme offre des solutions financières adaptées pour aider
+            les femmes entrepreneures vulnérables à développer leurs petites
+            entreprises. Accès à des microcrédits, formations en gestion et
+            accompagnement personnalisé.
+          </p>
+          <button className='btn btn-primary mt-2'>
+            En savoir plus <ArrowRight className='ms-2' />
+          </button>
+        </>
+      ),
     },
     {
       url: '/act2.jpg',
       caption: 'Activite 2',
+      content: (
+        <>
+          <h3 className='fw-bold'>Réseau de Solidarité Féminine</h3>
+          <p>
+            Rejoignez notre communauté de femmes entrepreneures! Partagez vos
+            expériences, bénéficiez de mentorat et créez des opportunités
+            commerciales grâce à notre réseau solidaire.
+          </p>
+          <button className='btn btn-primary mt-2'>
+            Rejoindre maintenant <ArrowBarRight className='ms-2' />
+          </button>
+        </>
+      ),
     },
+    // You can add more slides here if needed
   ]
 
   return (
