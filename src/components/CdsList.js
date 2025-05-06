@@ -16,7 +16,7 @@ const CdsList = () => {
     const data = await axios.get(
       'https://api.npoint.io/21d771eb6ff6e4e0fbe3/cds'
     )
-    console.log(' I am here inside getCDS')
+   
     console.log(data.data)
 
     setCds(data.data)

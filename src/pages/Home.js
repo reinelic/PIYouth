@@ -34,16 +34,15 @@ const Home = () => {
         <div className=' row home  flex '>
           <div className=' col-md-7 home_info'>
             <h1 className='home_info--titl e fw-bold fs-primary-heading text-primary-200'>
-              <span class='text-accent-heading '> Jeunesse Resiliente</span>{' '}
+              <span class='text-accent-heading '> Femmes Resilientes</span>{' '}
               <br />
               Un monde Resilient
             </h1>
 
             <div className='home_info--body text-primary-200 fs-section'>
-              Pathfinder Burundi aide les jeunes a avoir acces a une sante
-              sexuelle et reproductive saine. Rejoignez la communaute des jeunes
-              PI pour beneficier de l'education et services en sante sexuelle et
-              reproductive
+              SUMA aide les femmes a avoir acces aux services financiers et a
+              les equiper avec les ressources pour faire face a leurs besoins.
+              Rejoignez la communaute des femmes SUMA
             </div>
 
             <div className='home_info--action d-flex'>
@@ -84,12 +83,11 @@ const Home = () => {
                 className='component mb-2'
               />
 
-              <div className='text-primary-100 mt-4 w-70 fs-section '>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam quas nobis itaque mollitia aut corporis praesentium
-                libero doloribus tempore, facere ut alias, cum commodi voluptas
-                tempora rerum, perspiciatis expedita. Blanditiis impedit
-                consectetur cum non unde fugiat magnam repudiandae,
+              <div className='text-primary-100 w-70 fs-section mt-4 '>
+                Face aux problemes de non education financiere , SUMA a mis en
+                place une plateforme aidant les femmes a avoir acces aux
+                services financiers et a les equiper avec les ressources pour
+                faire face a leurs besoins.
               </div>
             </div>
 
@@ -113,8 +111,8 @@ const Home = () => {
             <div></div>
           )}
 
-          <div className='row mt-4 mb-4 border-primary'>
-            <div className='col-md-4 bg-primary p-2 cdsagent'>
+          <div className='row border-primary mt-4 mb-4'>
+            <div className='col-md-4 bg-primary cdsagent p-2'>
               {/* <img src="https://images.unsplash.com/photo-1645378999013-95abebf5f3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" className="img" /> */}
             </div>
 
